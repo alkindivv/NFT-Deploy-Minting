@@ -11,13 +11,13 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+
+
 # Build artifacts
 # artifacts/
 # cache/
 # typechain/
 # typechain-types/
-
-
 
 # IDE
 .vscode/
@@ -102,8 +102,8 @@ jspm_packages/
 .tern-port
 
 # Hardhat files
-cache
-artifacts
+# cache
+# artifacts
 
 # Temporary files
 tmp/

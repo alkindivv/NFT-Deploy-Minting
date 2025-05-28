@@ -269,9 +269,9 @@ class NFTBotCLI {
           default: "5",
           validate: (input) => {
             const num = parseInt(input);
-            return !isNaN(num) && num > 0 && num <= 50
+            return !isNaN(num) && num > 0 && num <= 350
               ? true
-              : "Masukkan angka 1-50";
+              : "Masukkan angka 1-350";
           },
         },
         {
@@ -335,7 +335,9 @@ class NFTBotCLI {
       results.forEach((result, index) => {
         console.log(
           chalk.white(
-            `   ${index + 1}. Token ID: ${result.tokenId} - TX: ${result.transactionHash}`
+            `   ${index + 1}. Token ID: ${result.tokenId} - TX: ${
+              result.transactionHash
+            }`
           )
         );
       });

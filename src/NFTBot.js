@@ -142,7 +142,9 @@ class NFTBot {
 
     console.log(
       chalk.yellow(
-        `⛽ Using gas price: ${gasPrice ? ethers.formatUnits(gasPrice, "gwei") : "auto"} gwei`
+        `⛽ Using gas price: ${
+          gasPrice ? ethers.formatUnits(gasPrice, "gwei") : "auto"
+        } gwei`
       )
     );
 
@@ -270,7 +272,9 @@ class NFTBot {
       const balance = await this.provider.getBalance(this.signer.address);
       if (balance < mintPrice) {
         throw new Error(
-          `Balance tidak cukup. Diperlukan: ${ethers.formatEther(mintPrice)} ETH, Tersedia: ${ethers.formatEther(balance)} ETH`
+          `Balance tidak cukup. Diperlukan: ${ethers.formatEther(
+            mintPrice
+          )} ETH, Tersedia: ${ethers.formatEther(balance)} ETH`
         );
       }
 
@@ -312,7 +316,9 @@ class NFTBot {
 
       console.log(
         chalk.yellow(
-          `⛽ Using gas price: ${gasPrice ? ethers.formatUnits(gasPrice, "gwei") : "auto"} gwei`
+          `⛽ Using gas price: ${
+            gasPrice ? ethers.formatUnits(gasPrice, "gwei") : "auto"
+          } gwei`
         )
       );
 
