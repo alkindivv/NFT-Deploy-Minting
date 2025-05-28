@@ -1,8 +1,8 @@
 {
-  "contractAddress": "0xB6cB6F79428B0E248f5B0674baAB52c6686ed319",
+  "contractAddress": "0x585bEA77057095cbbC64CDD4a1E3308DB4961Fba",
   "network": "base",
   "deployer": "0xFbf0bDcc656146d422d4977f064b72B2D9EA5bCD",
-  "deploymentTime": "2025-05-28T11:19:10.538Z",
+  "deploymentTime": "2025-05-28T22:05:56.968Z",
   "contractConfig": {
     "name": "My Awesome NFT Collection",
     "symbol": "MANC",
@@ -10,6 +10,8 @@
     "maxSupply": "10000",
     "baseURI": "https://your-metadata-server.com/metadata/"
   },
-  "transactionHash": "0xeb85b2222ac6fabae8729e72de60d5de340856ced45b6d0e771b001dd70aca01",
-  "gasUsed": "2190373"
+  "transactionHash": "0xd12790d6a02d286818e91076f98d150202de66334d5aff497e166bbe154346c1",
+  "gasUsed": "2056359",
+  "gasPrice": "0.002852806",
+  "nonce": 31
 }

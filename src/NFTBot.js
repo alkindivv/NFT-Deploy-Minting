@@ -134,17 +134,28 @@ class NFTBot {
       this.signer
     );
 
-    // Get current gas price and increase it to avoid replacement underpriced error
+    // Get current nonce to avoid replacement issues
+    const currentNonce = await this.provider.getTransactionCount(
+      this.signer.address,
+      "pending"
+    );
+    console.log(chalk.yellow(`🔢 Using nonce: ${currentNonce}`));
+
+    // Get current gas price and increase it significantly to avoid replacement underpriced error
     const feeData = await this.provider.getFeeData();
-    const gasPrice = feeData.gasPrice
-      ? (feeData.gasPrice * 120n) / 100n
-      : undefined; // 20% higher
+    let gasPrice;
+
+    if (feeData.gasPrice) {
+      // Increase gas price by 50% to avoid replacement issues
+      gasPrice = (feeData.gasPrice * 150n) / 100n;
+    } else {
+      // Fallback gas price for networks without EIP-1559
+      gasPrice = ethers.parseUnits("2", "gwei");
+    }
 
     console.log(
       chalk.yellow(
-        `⛽ Using gas price: ${
-          gasPrice ? ethers.formatUnits(gasPrice, "gwei") : "auto"
-        } gwei`
+        `⛽ Using gas price: ${ethers.formatUnits(gasPrice, "gwei")} gwei`
       )
     );
 
@@ -152,13 +163,12 @@ class NFTBot {
     const mintPriceWei = ethers.parseEther(mintPrice.toString());
 
     const deployOptions = {
-      gasLimit: 3000000, // Set a reasonable gas limit
+      gasLimit: 3500000, // Increase gas limit
+      gasPrice: gasPrice,
+      nonce: currentNonce,
     };
 
-    // Add gas price if available
-    if (gasPrice) {
-      deployOptions.gasPrice = gasPrice;
-    }
+    console.log(chalk.blue("🚀 Deploying contract..."));
 
     const contract = await contractFactory.deploy(
       name,
@@ -190,6 +200,8 @@ class NFTBot {
       },
       transactionHash: deploymentTx.hash,
       gasUsed: (await deploymentTx.wait()).gasUsed.toString(),
+      gasPrice: ethers.formatUnits(gasPrice, "gwei"),
+      nonce: currentNonce,
     };
 
     // Buat direktori deployments jika belum ada
@@ -290,13 +302,7 @@ class NFTBot {
         throw new Error("Max supply sudah tercapai");
       }
 
-      // Skip validasi mintedByAddress karena bermasalah
-      console.log(
-        chalk.yellow("⚠️ Skipping mint limit validation (known issue)")
-      );
-
-      // Skip static call test karena bermasalah dengan metadata kompleks
-      console.log(chalk.yellow("⚠️ Skipping static call test (known issue)"));
+      console.log(chalk.green("✅ Semua validasi berhasil"));
 
       // Estimasi gas
       const gasEstimate = await this.contract.mint.estimateGas(
@@ -308,30 +314,38 @@ class NFTBot {
       );
       console.log(chalk.white(`⛽ Gas estimate: ${gasEstimate.toString()}`));
 
-      // Get current gas price and increase it to avoid replacement underpriced error
+      // Get current nonce to avoid replacement issues
+      const currentNonce = await this.provider.getTransactionCount(
+        this.signer.address,
+        "pending"
+      );
+      console.log(chalk.yellow(`🔢 Using nonce: ${currentNonce}`));
+
+      // Get current gas price and increase it significantly to avoid replacement underpriced error
       const feeData = await this.provider.getFeeData();
-      const gasPrice = feeData.gasPrice
-        ? (feeData.gasPrice * 120n) / 100n
-        : undefined; // 20% higher
+      let gasPrice;
+
+      if (feeData.gasPrice) {
+        // Increase gas price by 50% to avoid replacement issues
+        gasPrice = (feeData.gasPrice * 150n) / 100n;
+      } else {
+        // Fallback gas price for networks without EIP-1559
+        gasPrice = ethers.parseUnits("2", "gwei");
+      }
 
       console.log(
         chalk.yellow(
-          `⛽ Using gas price: ${
-            gasPrice ? ethers.formatUnits(gasPrice, "gwei") : "auto"
-          } gwei`
+          `⛽ Using gas price: ${ethers.formatUnits(gasPrice, "gwei")} gwei`
         )
       );
 
       // Mint NFT dengan gas limit yang lebih tinggi dan gas price yang disesuaikan
       const txOptions = {
         value: mintPrice,
-        gasLimit: Math.floor(Number(gasEstimate) * 1.2), // 20% buffer
+        gasLimit: Math.floor(Number(gasEstimate) * 1.3), // 30% buffer
+        gasPrice: gasPrice,
+        nonce: currentNonce,
       };
-
-      // Add gas price if available
-      if (gasPrice) {
-        txOptions.gasPrice = gasPrice;
-      }
 
       const tx = await this.contract.mint(recipient, metadata, txOptions);
 

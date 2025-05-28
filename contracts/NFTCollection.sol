@@ -14,9 +14,6 @@ contract NFTCollection is ERC721, ERC721URIStorage, Ownable, ReentrancyGuard {
     string private _baseTokenURI;
     bool public mintingEnabled = true;
 
-    mapping(address => uint256) public mintedByAddress;
-    uint256 public maxMintPerAddress = 10;
-
     event NFTMinted(address indexed to, uint256 indexed tokenId, string tokenURI);
     event MintPriceUpdated(uint256 newPrice);
     event BaseURIUpdated(string newBaseURI);
@@ -52,15 +49,12 @@ contract NFTCollection is ERC721, ERC721URIStorage, Ownable, ReentrancyGuard {
         supplyAvailable
     {
         require(msg.value >= mintPrice, "Insufficient payment");
-        require(mintedByAddress[to] < maxMintPerAddress, "Max mint per address reached");
 
         uint256 tokenId = _nextTokenId;
         _nextTokenId++;
 
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, tokenURI);
-
-        mintedByAddress[to]++;
 
         emit NFTMinted(to, tokenId, tokenURI);
     }
@@ -80,15 +74,11 @@ contract NFTCollection is ERC721, ERC721URIStorage, Ownable, ReentrancyGuard {
         require(_nextTokenId + recipients.length - 1 <= maxSupply, "Would exceed max supply");
 
         for (uint256 i = 0; i < recipients.length; i++) {
-            require(mintedByAddress[recipients[i]] < maxMintPerAddress, "Max mint per address reached");
-
             uint256 tokenId = _nextTokenId;
             _nextTokenId++;
 
             _safeMint(recipients[i], tokenId);
             _setTokenURI(tokenId, tokenURIs[i]);
-
-            mintedByAddress[recipients[i]]++;
 
             emit NFTMinted(recipients[i], tokenId, tokenURIs[i]);
         }
@@ -111,10 +101,6 @@ contract NFTCollection is ERC721, ERC721URIStorage, Ownable, ReentrancyGuard {
     function setMintPrice(uint256 _newPrice) public onlyOwner {
         mintPrice = _newPrice;
         emit MintPriceUpdated(_newPrice);
-    }
-
-    function setMaxMintPerAddress(uint256 _maxMint) public onlyOwner {
-        maxMintPerAddress = _maxMint;
     }
 
     function setBaseURI(string memory _newBaseURI) public onlyOwner {
