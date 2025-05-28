@@ -1,0 +1,41 @@
+{
+  "name": "nft-deploy-mint-bot",
+  "version": "1.0.0",
+  "description": "Bot untuk deploy dan mint NFT secara otomatis di berbagai blockchain",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.js --network base",
+    "deploy:testnet": "node src/deploy-testnet.js",
+    "test:mint": "node src/test-mint.js",
+    "debug": "node src/debug.js",
+    "mint": "node src/mint.js"
+  },
+  "dependencies": {
+    "ethers": "^6.8.1",
+    "hardhat": "^2.19.0",
+    "@openzeppelin/contracts": "^5.0.0",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.0",
+    "fs-extra": "^11.1.1",
+    "chalk": "^4.1.2",
+    "inquirer": "^8.2.6",
+    "cli-progress": "^3.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0"
+  },
+  "keywords": [
+    "nft",
+    "blockchain",
+    "base",
+    "ethereum",
+    "mint",
+    "deploy"
+  ],
+  "author": "NFT Bot Creator",
+  "license": "MIT"
+}
