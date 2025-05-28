@@ -1,17 +1,17 @@
 {
-  "contractAddress": "0x585bEA77057095cbbC64CDD4a1E3308DB4961Fba",
+  "contractAddress": "0x3D476694C1d374e579DC24432a3fcCCDb0765561",
   "network": "base",
   "deployer": "0xFbf0bDcc656146d422d4977f064b72B2D9EA5bCD",
-  "deploymentTime": "2025-05-28T22:05:56.968Z",
+  "deploymentTime": "2025-05-28T22:10:19.321Z",
   "contractConfig": {
-    "name": "My Awesome NFT Collection",
-    "symbol": "MANC",
-    "mintPrice": "0.0000001",
+    "name": "OmniHub NFT Collection",
+    "symbol": "OMNIHUB",
+    "mintPrice": "0.00000001",
     "maxSupply": "10000",
-    "baseURI": "https://your-metadata-server.com/metadata/"
+    "baseURI": "https://api.omnihub.io/metadata/"
   },
-  "transactionHash": "0xd12790d6a02d286818e91076f98d150202de66334d5aff497e166bbe154346c1",
-  "gasUsed": "2056359",
-  "gasPrice": "0.002852806",
-  "nonce": 31
+  "transactionHash": "0x144103b1c19e2cf03fe128e86fbc90702a02e4f6b0144a977c70c23e74b3e411",
+  "gasUsed": "2033873",
+  "gasPrice": "0.002782071",
+  "nonce": 32
 }

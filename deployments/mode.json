@@ -1,8 +1,8 @@
 {
-  "contractAddress": "0xC79906A7160492748173f08E76a8b6D1187c2A25",
+  "contractAddress": "0x2bF70738B7f0dC556EC9087969A10c4DB6863541",
   "network": "mode",
   "deployer": "0xFbf0bDcc656146d422d4977f064b72B2D9EA5bCD",
-  "deploymentTime": "2025-05-28T12:56:55.511Z",
+  "deploymentTime": "2025-05-28T22:11:43.577Z",
   "contractConfig": {
     "name": "OmniHub NFT Collection",
     "symbol": "OMNIHUB",
@@ -10,6 +10,8 @@
     "maxSupply": "10000",
     "baseURI": "https://api.omnihub.io/metadata/"
   },
-  "transactionHash": "0x9f2de99adac0ed039063a63dce1f627ecde72ab555747906d132d9bc76568224",
-  "gasUsed": "2033873"
+  "transactionHash": "0xb8816b97d88c21aa4f290d373831c4e262d32313df7eea3ad3b0d69ec0c878aa",
+  "gasUsed": "2033873",
+  "gasPrice": "0.001500555",
+  "nonce": 5
 }
