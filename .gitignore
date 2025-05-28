@@ -12,13 +12,12 @@ yarn-error.log*
 .env.production.local
 
 # Build artifacts
-artifacts/
-cache/
-typechain/
-typechain-types/
+# artifacts/
+# cache/
+# typechain/
+# typechain-types/
 
-# Deployment info (optional - remove if you want to track deployments)
-deployments/
+
 
 # IDE
 .vscode/
