@@ -1,61 +1,61 @@
 {
-  "timestamp": "2025-05-28T22:11:43.824Z",
+  "timestamp": "2025-06-01T11:18:57.385Z",
   "contractConfig": {
-    "name": "OmniHub NFT Collection",
-    "symbol": "OMNIHUB",
-    "mintPrice": "0.00000001",
-    "maxSupply": 10000,
-    "baseURI": "https://api.omnihub.io/metadata/"
+    "name": "SuperNFT",
+    "symbol": "SUPER",
+    "mintPrice": "0",
+    "maxSupply": 999999999,
+    "baseURI": "https://google.com/"
   },
   "successful": [
     {
       "network": "base",
       "success": true,
-      "contractAddress": "0x3D476694C1d374e579DC24432a3fcCCDb0765561",
-      "transactionHash": "0x144103b1c19e2cf03fe128e86fbc90702a02e4f6b0144a977c70c23e74b3e411",
-      "mintPrice": "0.00000001"
+      "contractAddress": "0xdd4494396D521278AEc32D79cB1b733B6C49a570",
+      "transactionHash": "0x9d62a7d8b1108e2a3ca0400065a33d59d3e0b97130af428be6b008602c9d82fd",
+      "mintPrice": "0"
     },
     {
       "network": "optimism",
       "success": true,
-      "contractAddress": "0xfe22E12112Da0Bd97A9AA4c47F6435C0E8540A2C",
-      "transactionHash": "0x712cc9fae1b9cbb1a0889d2859b6c18a21250e4a8e8c84498915d65f6c06a157",
-      "mintPrice": "0.00000001"
+      "contractAddress": "0x1ed3273430322429a11267855f3C32003b0EFa97",
+      "transactionHash": "0xa8c32182b13802d4ff5b04074f709dff90d3465c5b1bd586ce28d29763ef4f57",
+      "mintPrice": "0"
     },
     {
       "network": "soneium",
       "success": true,
-      "contractAddress": "0xfB6f1194A40c15689E6aC18096711645C302819b",
-      "transactionHash": "0x8375e0f33dcd215d514f55d140cdc6773574390d1c18d5dc44fe882d9c66f044",
-      "mintPrice": "0.00000001"
+      "contractAddress": "0xdd4494396D521278AEc32D79cB1b733B6C49a570",
+      "transactionHash": "0xe340060f474e2fd22d34cacd0b880bf62ab7628653525ed856dfa384ea7a825b",
+      "mintPrice": "0"
     },
     {
       "network": "lisk",
       "success": true,
-      "contractAddress": "0x5B25c1A2B5DA0951b22924e68CE0fA61BD24c85a",
-      "transactionHash": "0x918ebdeaed13722f16a9b5e59920776085b8df434356fb0d51c29e97b785a990",
-      "mintPrice": "0.00000001"
+      "contractAddress": "0xdd4494396D521278AEc32D79cB1b733B6C49a570",
+      "transactionHash": "0x278369df360084b07e7d8377f9fb6d9e736a4ef0f227a9c15c4f0a8ce756062f",
+      "mintPrice": "0"
     },
     {
       "network": "unichain",
       "success": true,
-      "contractAddress": "0x1869483d55611b6ef4f437C554cd49874dB8566E",
-      "transactionHash": "0xc72b90c170e3017006a3e0c06fb9b1ab8897f936e41ca4edce8d8d99f8abef34",
-      "mintPrice": "0.00000001"
+      "contractAddress": "0xdd4494396D521278AEc32D79cB1b733B6C49a570",
+      "transactionHash": "0x2c83f52b541bc204d916d54b167bfd19c4ab2bfbc25dd5c51a39030447a085a2",
+      "mintPrice": "0"
     },
     {
       "network": "ink",
       "success": true,
-      "contractAddress": "0xBc63E99e3876a42da091beA48Eb9891d94Eaf501",
-      "transactionHash": "0x2566614084ee9f0f0791141a5b56f2d414a151111fd98a22c56ba5f96d30f1c2",
-      "mintPrice": "0.00000001"
+      "contractAddress": "0xdd4494396D521278AEc32D79cB1b733B6C49a570",
+      "transactionHash": "0xc1bcbc32b5a1ec9b59f7fa1042cb634cd65e40392a4d48645160461ab6fcbcbe",
+      "mintPrice": "0"
     },
     {
       "network": "mode",
       "success": true,
-      "contractAddress": "0x2bF70738B7f0dC556EC9087969A10c4DB6863541",
-      "transactionHash": "0xb8816b97d88c21aa4f290d373831c4e262d32313df7eea3ad3b0d69ec0c878aa",
-      "mintPrice": "0.00000001"
+      "contractAddress": "0xdd4494396D521278AEc32D79cB1b733B6C49a570",
+      "transactionHash": "0xa9f9c52a9798f90be1f35281704e22c5ad708867812a5c80fc19be9b5f6a7729",
+      "mintPrice": "0"
     }
   ],
   "failed": [],

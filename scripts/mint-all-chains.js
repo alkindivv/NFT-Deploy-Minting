@@ -10,13 +10,12 @@ async function mintOnAllChains() {
   const mintConfig = {
     recipient:
       process.env.RECIPIENT_ADDRESS ||
-      "0xFbf0bDcc656146d422d4977f064b72B2D9EA5bCD", // Default ke address yang ada
+      "0xf83Bd5A68A91EAB280b05C73F79ed83CCfd0311c", // Default ke address yang ada
     count: 250,
-    baseName: "OmniHub NFT",
-    baseDescription:
-      "Multi-chain NFT collection deployed across all supported networks",
-    baseImageUrl: "https://api.omnihub.io/images/",
-    delay: 2000, // 2 detik delay antar mint
+    baseName: "SuperNFT",
+    baseDescription: "test",
+    baseImageUrl: "https://google.com/",
+    delay: 3000, // 2 detik delay antar mint
   };
 
   // Load deployment summary untuk mendapatkan contract addresses

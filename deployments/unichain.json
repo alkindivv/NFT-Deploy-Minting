@@ -1,17 +1,17 @@
 {
-  "contractAddress": "0x1869483d55611b6ef4f437C554cd49874dB8566E",
+  "contractAddress": "0xdd4494396D521278AEc32D79cB1b733B6C49a570",
   "network": "unichain",
-  "deployer": "0xFbf0bDcc656146d422d4977f064b72B2D9EA5bCD",
-  "deploymentTime": "2025-05-28T22:11:19.461Z",
+  "deployer": "0xf83Bd5A68A91EAB280b05C73F79ed83CCfd0311c",
+  "deploymentTime": "2025-06-01T11:18:34.734Z",
   "contractConfig": {
-    "name": "OmniHub NFT Collection",
-    "symbol": "OMNIHUB",
-    "mintPrice": "0.00000001",
-    "maxSupply": "10000",
-    "baseURI": "https://api.omnihub.io/metadata/"
+    "name": "SuperNFT",
+    "symbol": "SUPER",
+    "mintPrice": "0",
+    "maxSupply": "999999999",
+    "baseURI": "https://google.com/"
   },
-  "transactionHash": "0xc72b90c170e3017006a3e0c06fb9b1ab8897f936e41ca4edce8d8d99f8abef34",
-  "gasUsed": "2033873",
-  "gasPrice": "0.001501044",
-  "nonce": 11
+  "transactionHash": "0x2c83f52b541bc204d916d54b167bfd19c4ab2bfbc25dd5c51a39030447a085a2",
+  "gasUsed": "1991368",
+  "gasPrice": "0.001500538",
+  "nonce": 0
 }

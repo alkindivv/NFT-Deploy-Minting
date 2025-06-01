@@ -8,11 +8,11 @@ async function deployToAllChains() {
 
   // Konfigurasi contract
   const contractConfig = {
-    name: "OmniHub NFT Collection",
-    symbol: "OMNIHUB",
-    mintPrice: "0.00000001", // 0.001 ETH
-    maxSupply: 10000,
-    baseURI: "https://api.omnihub.io/metadata/",
+    name: "SuperNFT",
+    symbol: "SUPER",
+    mintPrice: "0", // 0.001 ETH
+    maxSupply: 999999999,
+    baseURI: "https://google.com/",
   };
 
   // Daftar semua chain yang didukung
